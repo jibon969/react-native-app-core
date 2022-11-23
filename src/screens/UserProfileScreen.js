@@ -166,7 +166,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*About Us*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('AboutStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>

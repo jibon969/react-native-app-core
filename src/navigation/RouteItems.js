@@ -10,6 +10,11 @@ export const screens = {
 
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
+
+    AboutStackStack: 'AboutStackStack',
+    AboutStack: 'AboutStack',
+
+
 };
 
 export const routes = [
@@ -74,6 +79,26 @@ export const routes = [
         name: screens.UserProfile,
         focusedRoute: screens.UserProfileStack,
         title: 'User Profile',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+
+    // AboutStackNavigator ==========================
+    {
+        name: screens.AboutStackStack,
+        focusedRoute: screens.AboutStackStack,
+        title: 'About',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+    {
+        name: screens.AboutStack,
+        focusedRoute: screens.AboutStackStack,
+        title: 'About',
         showInTab: false,
         showInDrawer: false,
         icon: (focused) =>

@@ -5,6 +5,7 @@ import {routes, screens} from './RouteItems'
 import HomeStackNavigator from './stack-navigators/HomeStackNavigator'
 import ContactStackNavigator from './stack-navigators/ContactStackNavigator'
 import UserProfileStackNavigator from './stack-navigators/UserProfileStackNavigator'
+import AboutStackNavigator from './stack-navigators/AboutStackNavigator'
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.HomeStack} component={HomeStackNavigator}/>
             <Tab.Screen name={screens.ContactStack} component={ContactStackNavigator}/>
             <Tab.Screen name={screens.UserProfileStack} component={UserProfileStackNavigator}/>
+            <Tab.Screen name={screens.AboutStack} component={AboutStackNavigator}/>
         </Tab.Navigator>
     )
 };
