@@ -7,6 +7,9 @@ export const screens = {
     Home: 'Home',
     ContactStack: 'ContactStack',
     Contact: 'Contact',
+
+    UserProfileStack: 'UserProfileStack',
+    UserProfile: 'UserProfile',
 };
 
 export const routes = [
@@ -51,6 +54,26 @@ export const routes = [
         name: screens.Contact,
         focusedRoute: screens.ContactStack,
         title: 'Contact Us',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+
+    // UserProfileStack ==========================
+    {
+        name: screens.UserProfileStack,
+        focusedRoute: screens.UserProfileStack,
+        title: 'User Profile',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+    {
+        name: screens.UserProfile,
+        focusedRoute: screens.UserProfileStack,
+        title: 'User Profile',
         showInTab: false,
         showInDrawer: false,
         icon: (focused) =>

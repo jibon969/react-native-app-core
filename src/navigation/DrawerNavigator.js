@@ -2,6 +2,7 @@ import * as React from 'react'
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native'
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import {FontAwesome} from '@expo/vector-icons';
 
 import BottomTabNavigator from './BottomTabNavigator'
 import {routes, screens} from './RouteItems'
@@ -50,17 +51,31 @@ const DrawerNavigator = ({nav}) => {
                     </TouchableOpacity>
                 ),
             })}
-            drawerContent={(props) => <CustomDrawerContent {...props} nav={nav}/>}
-        >
-            <Drawer.Screen name={screens.HomeTab} component={BottomTabNavigator} options={{
+            drawerContent={(props) => <CustomDrawerContent {...props} nav={nav}/>}>
+
+
+            <Drawer.Screen name={screens.HomeTab} component={BottomTabNavigator} options={({navigation}) => ({
                 title: 'Home',
-                headerTitle: () => <Text style={{color: "#fff", fontSize: 18}}>Application</Text>,
+                headerTitle: () =>
+                    <View>
+                        <Text style={{fontSize: 20, color: "#fff", marginLeft: 50}}>Application</Text>
+                    </View>,
                 headerRight: () => (
                     <View style={styles.headerRight}>
-                        <Icon name="bell" size={20} color="#fff"/>
+                        {/*Search Icon*/}
+                        <View style={{flexDirection: "row"}}>
+                            <TouchableOpacity>
+                                <FontAwesome name="search" size={20} color="#fff" style={{margin: 10}}/>
+                            </TouchableOpacity>
+                            {/*User Profile Icon*/}
+                            <TouchableOpacity onPress={() => navigation.navigate('UserProfileStack')}>
+                                <FontAwesome name="user" size={20} color="#fff" style={{margin: 10}}/>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 ),
-            }}/>
+                headerShown: true
+            })}/>
         </Drawer.Navigator>
     )
 };
@@ -68,9 +83,9 @@ const DrawerNavigator = ({nav}) => {
 const styles = StyleSheet.create({
     headerLeft: {
         marginLeft: 15,
-        borderRadius: 30,
+        borderRadius: 50,
         elevation: 20,
-        padding:10
+        padding: 10
     },
     headerTitle: {
         color: 'white',
@@ -96,6 +111,6 @@ const styles = StyleSheet.create({
     drawerItemFocused: {
         backgroundColor: '#ba9490',
     },
-})
+});
 
 export default DrawerNavigator
