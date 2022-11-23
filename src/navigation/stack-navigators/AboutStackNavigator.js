@@ -1,12 +1,32 @@
+// import React from 'react'
+// import {createStackNavigator} from '@react-navigation/stack'
+// import AboutScreen from "../../screens/AboutScreen";
+//
+// const Stack = createStackNavigator();
+//
+//
+// const AboutStackNavigator = () => {
+//     return (
+//         <Stack.Navigator screenOptions={{
+//             headerShown: false,
+//         }}>
+//             <Stack.Screen name="About" component={AboutScreen}/>
+//         </Stack.Navigator>
+//     )
+// };
+//
+// export default AboutStackNavigator
+
+
 import React from 'react'
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
-import ContactScreen from "../../screens/ContactScreen";
+import AboutScreen from "../../screens/AboutScreen";
 
 const Stack = createStackNavigator();
 
-const ContactStackNavigator = () => {
+const AboutStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={({navigation, route}) => ({
             headerShown: true,
@@ -16,7 +36,7 @@ const ContactStackNavigator = () => {
                 height: 50
             },
             headerLeft: () => (
-                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerLeft}>
+                <TouchableOpacity onPress={() => navigation.navigate('UserProfileStack')} style={styles.headerLeft}>
                     <Ionicons name="arrow-back-outline" size={25} color="#fff" style={{padding: 5}}/>
                 </TouchableOpacity>
             ),
@@ -37,7 +57,7 @@ const ContactStackNavigator = () => {
                 </View>
             ),
         })}>
-            <Stack.Screen name="Contact" component={ContactScreen}/>
+            <Stack.Screen name="About" component={AboutScreen}/>
         </Stack.Navigator>
     )
 };
@@ -85,4 +105,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ContactStackNavigator
+export default AboutStackNavigator
