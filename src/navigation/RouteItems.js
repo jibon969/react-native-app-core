@@ -5,6 +5,7 @@ export const screens = {
     HomeTab: 'HomeTab',
     HomeStack: 'HomeStack',
     Home: 'Home',
+
     ContactStack: 'ContactStack',
     Contact: 'Contact',
 
@@ -16,6 +17,9 @@ export const screens = {
 
     TermsConditionStack: 'TermsConditionStack',
     TermsCondition: 'TermsCondition',
+
+    SecurityPrivacyStack: 'SecurityPrivacyStack',
+    SecurityPrivacy: 'SecurityPrivacy',
 
 
 };
@@ -113,6 +117,23 @@ export const routes = [
         name: screens.TermsCondition,
         focusedRoute: screens.TermsConditionStack,
         title: 'Terms Condition',
+        showInTab: false,
+        showInDrawer: false
+    },
+
+    // SecurityPrivacy ==========================
+    {
+        name: screens.SecurityPrivacyStack,
+        focusedRoute: screens.SecurityPrivacyStack,
+        title: 'Security & Privacy',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    {
+        name: screens.SecurityPrivacy,
+        focusedRoute: screens.SecurityPrivacyStack,
+        title: 'Security & Privacy',
         showInTab: false,
         showInDrawer: false
     },
