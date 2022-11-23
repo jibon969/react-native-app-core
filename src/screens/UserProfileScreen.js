@@ -128,7 +128,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*Terms & Conditions*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('TermsConditionStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>

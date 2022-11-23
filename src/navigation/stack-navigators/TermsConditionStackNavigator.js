@@ -1,14 +1,15 @@
 import React from 'react'
-import {FontAwesome, Ionicons} from "@expo/vector-icons";
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
-import AboutScreen from "../../screens/AboutScreen";
+import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {FontAwesome, Ionicons} from "@expo/vector-icons";
+import TermsConditionScreen from '../../screens/TermsConditionScreens'
 
 const Stack = createStackNavigator();
 
-const AboutStackNavigator = () => {
+
+const TermsConditionStackNavigator = () => {
     return (
-        <Stack.Navigator screenOptions={({navigation, route}) => ({
+        <Stack.Navigator screenOptions={({navigation}) => ({
             headerShown: true,
             headerTintColor: '#ffffff',
             headerStyle: {
@@ -24,12 +25,13 @@ const AboutStackNavigator = () => {
                 <View style={styles.headerRight}>
                     <View style={styles.headerContent}>
                         <Text style={styles.headerSearchIcon}>
-                            <FontAwesome name="search" size={20} color="#fff"/>
+                            <TouchableOpacity>
+                                <FontAwesome name="search" size={20} color="#fff"/>
+                            </TouchableOpacity>
                         </Text>
                         <Text style={styles.headerSearchIcon}>
                             <TouchableOpacity
-                                onPress={() => navigation.goBack()}
-                                style={styles.touchableButton}>
+                                onPress={() => navigation.navigate('UserProfileStack')} style={styles.touchableButton}>
                                 <FontAwesome name="user" size={20} color="#fff"/>
                             </TouchableOpacity>
                         </Text>
@@ -37,12 +39,20 @@ const AboutStackNavigator = () => {
                 </View>
             ),
         })}>
-            <Stack.Screen name="About" component={AboutScreen}/>
+            <Stack.Screen
+                name="TermsAndCondition"
+                options={{
+                    title: "Terms & Condition",
+                    headerTitleAlign: 'left',
+                }}
+                component={TermsConditionScreen}
+            />
         </Stack.Navigator>
     )
 };
 
 const styles = StyleSheet.create({
+    // Troggle
     headerLeft: {
         marginLeft: 10,
     },
@@ -68,21 +78,8 @@ const styles = StyleSheet.create({
         paddingTop: 3,
         padding: 3,
         borderRadius: 50
-    },
-    headerImage: {
-        ...Platform.select({
-            ios: {
-                width: 150,
-                height: 20,
-            },
-            android: {
-                width: 150,
-                height: 20,
-            }
-        })
-    },
+    }
 
 });
 
-
-export default AboutStackNavigator
+export default TermsConditionStackNavigator
