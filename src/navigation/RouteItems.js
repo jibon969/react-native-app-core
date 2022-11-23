@@ -11,8 +11,11 @@ export const screens = {
     UserProfileStack: 'UserProfileStack',
     UserProfile: 'UserProfile',
 
-    AboutStackStack: 'AboutStackStack',
     AboutStack: 'AboutStack',
+    About: 'About',
+
+    TermsConditionStack: 'TermsConditionStack',
+    TermsCondition: 'TermsCondition',
 
 
 };
@@ -71,9 +74,7 @@ export const routes = [
         focusedRoute: screens.UserProfileStack,
         title: 'User Profile',
         showInTab: false,
-        showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+        showInDrawer: false
     },
     {
         name: screens.UserProfile,
@@ -81,28 +82,39 @@ export const routes = [
         title: 'User Profile',
         showInTab: false,
         showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 
     // AboutStackNavigator ==========================
     {
-        name: screens.AboutStackStack,
-        focusedRoute: screens.AboutStackStack,
+        name: screens.AboutStack,
+        focusedRoute: screens.AboutStack,
         title: 'About',
         showInTab: false,
-        showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+        showInDrawer: false
     },
     {
-        name: screens.AboutStack,
-        focusedRoute: screens.AboutStackStack,
+        name: screens.About,
+        focusedRoute: screens.AboutStack,
         title: 'About',
         showInTab: false,
+        showInDrawer: false
+    },
+
+    // TermsConditionStack ==========================
+    {
+        name: screens.TermsConditionStack,
+        focusedRoute: screens.TermsConditionStack,
+        title: 'Terms Condition',
+        showInTab: false,
         showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+
+    {
+        name: screens.TermsCondition,
+        focusedRoute: screens.TermsConditionStack,
+        title: 'Terms Condition',
+        showInTab: false,
+        showInDrawer: false
     },
 
 ];
