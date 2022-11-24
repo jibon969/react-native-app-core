@@ -30,6 +30,9 @@ export const screens = {
     PurchaseHistoryStack: 'PurchaseHistoryStack',
     PurchaseHistory: 'PurchaseHistory',
 
+    UserInformationStack: 'UserInformationStack',
+    UserInformation: 'UserInformation',
+
 };
 
 export const routes = [
@@ -193,6 +196,23 @@ export const routes = [
         name: screens.PurchaseHistory,
         focusedRoute: screens.PurchaseHistoryStack,
         title: 'Purchase History',
+        showInTab: false,
+        showInDrawer: false
+    },
+
+    // PurchaseHistory ===================================
+    {
+        name: screens.UserInformationStack,
+        focusedRoute: screens.UserInformationStack,
+        title: 'User Information',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    {
+        name: screens.UserInformation,
+        focusedRoute: screens.UserInformationStack,
+        title: 'User Information',
         showInTab: false,
         showInDrawer: false
     },

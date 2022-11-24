@@ -33,7 +33,7 @@ const UserProfileScreen = ({navigation}) => {
 
                 <ScrollView>
                     {/*Personal Information this will use after authentication */}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('UserInformationStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
