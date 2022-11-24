@@ -21,6 +21,9 @@ export const screens = {
     SecurityPrivacyStack: 'SecurityPrivacyStack',
     SecurityPrivacy: 'SecurityPrivacy',
 
+    ReturnPolicyStack: 'ReturnPolicyStack',
+    ReturnPolicy: 'ReturnPolicyScreen',
+
 
 };
 
@@ -134,6 +137,23 @@ export const routes = [
         name: screens.SecurityPrivacy,
         focusedRoute: screens.SecurityPrivacyStack,
         title: 'Security & Privacy',
+        showInTab: false,
+        showInDrawer: false
+    },
+
+    // ReturnPolicyScreen ==========================
+    {
+        name: screens.ReturnPolicyStack,
+        focusedRoute: screens.ReturnPolicyStack,
+        title: 'Return Policy',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    {
+        name: screens.ReturnPolicy,
+        focusedRoute: screens.ReturnPolicyStack,
+        title: 'Return Policy',
         showInTab: false,
         showInDrawer: false
     },
