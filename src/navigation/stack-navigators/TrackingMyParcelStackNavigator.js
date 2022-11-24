@@ -2,11 +2,11 @@ import React from 'react'
 import {FontAwesome, Ionicons} from "@expo/vector-icons";
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
-import ContactScreen from "../../screens/ContactScreen";
+import TrackingMyParcelScreen from "../../screens/TrackingMyParcelScreen";
 
 const Stack = createStackNavigator();
 
-const ContactStackNavigator = () => {
+const TrackingMyParcelStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={({navigation, route}) => ({
             headerShown: true,
@@ -37,7 +37,7 @@ const ContactStackNavigator = () => {
                 </View>
             ),
         })}>
-            <Stack.Screen name="Contact" component={ContactScreen}/>
+            <Stack.Screen name="TrackingMyParcel" component={TrackingMyParcelScreen}/>
         </Stack.Navigator>
     )
 };
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ContactStackNavigator
+export default TrackingMyParcelStackNavigator

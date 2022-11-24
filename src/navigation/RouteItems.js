@@ -24,6 +24,9 @@ export const screens = {
     ReturnPolicyStack: 'ReturnPolicyStack',
     ReturnPolicy: 'ReturnPolicyScreen',
 
+    TrackingMyParcelStack: 'TrackingMyParcelStack',
+    TrackingMyParcel: 'TrackingMyParcel',
+
 
 };
 
@@ -154,6 +157,23 @@ export const routes = [
         name: screens.ReturnPolicy,
         focusedRoute: screens.ReturnPolicyStack,
         title: 'Return Policy',
+        showInTab: false,
+        showInDrawer: false
+    },
+
+    // TrackingMyParcelStack ===================================
+    {
+        name: screens.TrackingMyParcelStack,
+        focusedRoute: screens.TrackingMyParcelStack,
+        title: 'Tracking My Parcel',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    {
+        name: screens.TrackingMyParcel,
+        focusedRoute: screens.TrackingMyParcelStack,
+        title: 'Tracking My Parcel',
         showInTab: false,
         showInDrawer: false
     },

@@ -9,6 +9,7 @@ import AboutStackNavigator from './stack-navigators/AboutStackNavigator'
 import TermsConditionStackNavigator from './stack-navigators/TermsConditionStackNavigator'
 import SecurityPrivacyStackNavigator from './stack-navigators/SecurityPrivacyStackNavigator'
 import ReturnPolicyStackNavigator from './stack-navigators/ReturnPolicyStackNavigator'
+import TrackingMyParcelStackNavigator from './stack-navigators/TrackingMyParcelStackNavigator'
 
 const Tab = createBottomTabNavigator();
 
@@ -45,6 +46,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.TermsConditionStack} component={TermsConditionStackNavigator}/>
             <Tab.Screen name={screens.SecurityPrivacyStack} component={SecurityPrivacyStackNavigator}/>
             <Tab.Screen name={screens.ReturnPolicyStack} component={ReturnPolicyStackNavigator}/>
+            <Tab.Screen name={screens.TrackingMyParcelStack} component={TrackingMyParcelStackNavigator}/>
         </Tab.Navigator>
     )
 };
