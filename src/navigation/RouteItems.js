@@ -27,6 +27,8 @@ export const screens = {
     TrackingMyParcelStack: 'TrackingMyParcelStack',
     TrackingMyParcel: 'TrackingMyParcel',
 
+    PurchaseHistoryStack: 'PurchaseHistoryStack',
+    PurchaseHistory: 'PurchaseHistory',
 
 };
 
@@ -174,6 +176,23 @@ export const routes = [
         name: screens.TrackingMyParcel,
         focusedRoute: screens.TrackingMyParcelStack,
         title: 'Tracking My Parcel',
+        showInTab: false,
+        showInDrawer: false
+    },
+
+    // PurchaseHistory ===================================
+    {
+        name: screens.PurchaseHistoryStack,
+        focusedRoute: screens.PurchaseHistoryStack,
+        title: 'Purchase History',
+        showInTab: false,
+        showInDrawer: false,
+    },
+
+    {
+        name: screens.PurchaseHistory,
+        focusedRoute: screens.PurchaseHistoryStack,
+        title: 'Purchase History',
         showInTab: false,
         showInDrawer: false
     },

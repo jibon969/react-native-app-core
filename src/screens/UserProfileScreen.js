@@ -71,7 +71,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*Order History*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('PurchaseHistoryStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
