@@ -52,7 +52,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*Tracking My Parcel*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('TrackingMyParcelStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
@@ -109,7 +109,7 @@ const UserProfileScreen = ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*Security & Privacy*/}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('SecurityPrivacyStack')}>
                         <View style={styles.userProfileContent}>
                             <View style={styles.profileIcon}>
                                 <Text>
