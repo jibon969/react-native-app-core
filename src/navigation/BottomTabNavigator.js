@@ -12,6 +12,9 @@ import ReturnPolicyStackNavigator from './stack-navigators/ReturnPolicyStackNavi
 import TrackingMyParcelStackNavigator from './stack-navigators/TrackingMyParcelStackNavigator'
 import PurchaseHistoryStackNavigator from './stack-navigators/PurchaseHistoryStackNavigator'
 import UserInformationStackNavigator from './stack-navigators/UserInformationStackNavigator'
+import BrandStackNavigator from './stack-navigators/BrandStackNavigator'
+import CallStackNavigator from './stack-navigators/CallStackNavigator'
+
 
 const Tab = createBottomTabNavigator();
 
@@ -51,6 +54,8 @@ const BottomTabNavigator = () => {
             <Tab.Screen name={screens.ReturnPolicyStack} component={ReturnPolicyStackNavigator}/>
             <Tab.Screen name={screens.PurchaseHistoryStack} component={PurchaseHistoryStackNavigator}/>
             <Tab.Screen name={screens.UserInformationStack} component={UserInformationStackNavigator}/>
+            <Tab.Screen name={screens.BrandStack} component={BrandStackNavigator}/>
+            <Tab.Screen name={screens.CallStack} component={CallStackNavigator}/>
         </Tab.Navigator>
     )
 };

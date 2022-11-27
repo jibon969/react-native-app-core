@@ -1,5 +1,11 @@
 import * as React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import {FontAwesome} from '@expo/vector-icons';
+import {MaterialIcons} from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons';
+import {AntDesign} from '@expo/vector-icons';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
+
 
 export const screens = {
     HomeTab: 'HomeTab',
@@ -33,6 +39,12 @@ export const screens = {
     UserInformationStack: 'UserInformationStack',
     UserInformation: 'UserInformation',
 
+    BrandStack: 'BrandStack',
+    Brand: 'Brand',
+
+    CallStack: 'CallStack',
+    Call: 'Call',
+
 };
 
 export const routes = [
@@ -64,26 +76,23 @@ export const routes = [
             <Icon name="home" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 
+    // Contact Stack ==========================
     {
         name: screens.ContactStack,
         focusedRoute: screens.ContactStack,
         title: 'Contact Us',
-        showInTab: true,
+        showInTab: false,
         showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
     {
         name: screens.Contact,
         focusedRoute: screens.ContactStack,
         title: 'Contact Us',
         showInTab: false,
-        showInDrawer: false,
-        icon: (focused) =>
-            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+        showInDrawer: false
     },
 
-    // UserProfileStack ==========================
+    // UserProfile Stack ==========================
     {
         name: screens.UserProfileStack,
         focusedRoute: screens.UserProfileStack,
@@ -99,7 +108,7 @@ export const routes = [
         showInDrawer: false,
     },
 
-    // AboutStackNavigator ==========================
+    // About Stack==========================
     {
         name: screens.AboutStack,
         focusedRoute: screens.AboutStack,
@@ -115,7 +124,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // TermsConditionStack ==========================
+    // TermsCondition Stack ==========================
     {
         name: screens.TermsConditionStack,
         focusedRoute: screens.TermsConditionStack,
@@ -132,7 +141,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // SecurityPrivacy ==========================
+    // SecurityPrivacy Stack ==========================
     {
         name: screens.SecurityPrivacyStack,
         focusedRoute: screens.SecurityPrivacyStack,
@@ -149,7 +158,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // ReturnPolicyScreen ==========================
+    // ReturnPolicy Stack ==========================
     {
         name: screens.ReturnPolicyStack,
         focusedRoute: screens.ReturnPolicyStack,
@@ -166,7 +175,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // TrackingMyParcelStack ===================================
+    // TrackingMyParcel Stack ===================================
     {
         name: screens.TrackingMyParcelStack,
         focusedRoute: screens.TrackingMyParcelStack,
@@ -183,7 +192,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // PurchaseHistory ===================================
+    // PurchaseHistory Stack ===================================
     {
         name: screens.PurchaseHistoryStack,
         focusedRoute: screens.PurchaseHistoryStack,
@@ -200,7 +209,7 @@ export const routes = [
         showInDrawer: false
     },
 
-    // PurchaseHistory ===================================
+    // UserInformation Stack ===================================
     {
         name: screens.UserInformationStack,
         focusedRoute: screens.UserInformationStack,
@@ -216,5 +225,48 @@ export const routes = [
         showInTab: false,
         showInDrawer: false
     },
+
+    // Brand Stack ===================================
+    {
+        name: screens.BrandStack,
+        focusedRoute: screens.BrandStack,
+        title: 'Brands',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+    {
+        name: screens.Brand,
+        focusedRoute: screens.BrandStack,
+        title: 'Brands',
+        showInTab: false,
+        showInDrawer: false,
+
+        icon: (focused) =>
+            <Ionicons name="grid-sharp" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>,
+    },
+
+
+    // Call Stack ===================================
+    {
+        name: screens.CallStack,
+        focusedRoute: screens.CallStack,
+        title: 'Call Us',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+    {
+        name: screens.Call,
+        focusedRoute: screens.CallStack,
+        title: 'Call Us',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
+    },
+
 
 ];
