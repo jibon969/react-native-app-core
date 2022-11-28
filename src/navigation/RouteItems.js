@@ -45,6 +45,9 @@ export const screens = {
     CallStack: 'CallStack',
     Call: 'Call',
 
+    CategoryStack: 'CategoryStack',
+    Category: 'Category',
+
 };
 
 export const routes = [
@@ -268,5 +271,27 @@ export const routes = [
             <Icon name="phone" size={30} color={focused ? '#551E18' : '#000'}/>,
     },
 
+
+    // Category Stack =========================
+    {
+        name: screens.CategoryStack,
+        focusedRoute: screens.CategoryStack,
+        title: 'Category',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
+    {
+        name: screens.Category,
+        focusedRoute: screens.CategoryStack,
+        title: 'Category',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
 
 ];
