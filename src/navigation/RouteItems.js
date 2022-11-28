@@ -48,6 +48,9 @@ export const screens = {
     CategoryStack: 'CategoryStack',
     Category: 'Category',
 
+    CartStack: 'CartStack',
+    Cart: 'Cart',
+
 };
 
 export const routes = [
@@ -287,6 +290,29 @@ export const routes = [
         name: screens.Category,
         focusedRoute: screens.CategoryStack,
         title: 'Category',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
+
+
+    // Category Stack =========================
+    {
+        name: screens.CartStack,
+        focusedRoute: screens.CartStack,
+        title: 'Cart',
+        showInTab: true,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
+    {
+        name: screens.Cart,
+        focusedRoute: screens.CartStack,
+        title: 'Cart',
         showInTab: false,
         showInDrawer: false,
         icon: (focused) =>
