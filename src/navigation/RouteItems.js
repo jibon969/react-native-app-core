@@ -54,6 +54,9 @@ export const screens = {
     CheckoutStack: 'CheckoutStack',
     Checkout: 'Checkout',
 
+    ProductDetailStack: 'ProductDetailStack',
+    ProductDetail: 'ProductDetail',
+
 };
 
 export const routes = [
@@ -338,6 +341,28 @@ export const routes = [
         name: screens.Checkout,
         focusedRoute: screens.CheckoutStack,
         title: 'Checkout',
+        showInTab: false,
+        showInDrawer: false,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
+
+    // Product Detail Stack =========================
+    {
+        name: screens.ProductDetailStack,
+        focusedRoute: screens.ProductDetailStack,
+        title: 'Product Detail',
+        showInTab: false,
+        showInDrawer: true,
+        icon: (focused) =>
+            <MaterialIcons name="grid-on" size={focused ? 20 : 20} color={focused ? 'black' : '#969696'}/>
+
+    },
+    {
+        name: screens.ProductDetail,
+        focusedRoute: screens.ProductDetailStack,
+        title: 'Product Detail',
         showInTab: false,
         showInDrawer: false,
         icon: (focused) =>
